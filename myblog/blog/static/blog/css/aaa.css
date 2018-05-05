@@ -1,0 +1,151 @@
+
+			*{
+				margin: 0px;
+				padding: 0px;
+				border: none;
+			}
+			html,body{
+				background-color: #FFFFFF;
+			}
+			.content{
+				width: 1226px;
+				max-width: 1226px;
+				height: auto;
+				background-color: #FFFFFF;
+				margin: auto;
+				position: relative;
+			}
+
+			.content .left{
+				width: 300px;
+				height: 1300px;
+				background-color: #EEEEEE;
+				float: left;
+			}
+
+			.content .right{
+				position: absolute;
+				height: 1300px;
+				background-color: #FFFFFF;
+				top: 0px;
+				left: 300px;
+				right: 0px;
+			}
+			.content .left img{
+				display: block;
+				width: 200px;
+				height: 200px;
+				overflow: hidden;
+				margin-top: 10px;
+				margin-left: 50px;
+				border: 2px solid #FFFFFF;
+			}
+
+			.content .left .content-data{
+				width: 250px;
+				margin-left: 50px;
+				height: 60px;
+				line-height: 60px;
+			}
+
+			.content .left .content-data a{
+				width: 20px;
+				height: 20px;
+				background-color: #333333;
+				display: block;
+				border-radius: 20px;
+				margin-top: 20px;
+				float: left;
+			}
+
+			.content .left .content-data span{
+				color: #333333;
+				float: left;
+				margin-left: 20px;
+			}
+
+			.content .left .skill{
+				width: 250px;
+				height: 30px;
+				line-height: 30px;
+				margin-left: 50px;
+				color: #333333;
+				margin-top: 10px;
+			}
+
+			.content .left .skillbar{
+				width: 200px;
+				height: 15px;
+				margin-left: 50px;
+				background-color: #333333;
+			}
+
+
+
+			.content .right .name{
+				width: 100%;
+				height: 100px;
+				line-height: 100px;
+				padding-left: 100px;
+				font-size: 50px;
+				color: #333333;
+			}
+
+			.content .right .job{
+				width: 100%;
+				height: 20px;
+				line-height: 20px;
+				color: #333333;
+				padding-left: 100px;
+			}
+
+			.content .right .content-data-titlebox{
+				width: 100%;
+				height: auto;
+				position: relative;
+			}
+
+			.content .right .content-data-titlebox .title-img{
+				width: 50px;
+				height: 50px;
+				background-color: #333333;
+				margin-left: 100px;
+				margin-top: 50px;
+				border-radius: 50px;
+				color: #FFFFFF;
+				line-height: 50px;
+				text-align: center;
+			}
+
+			.content .right .content-data-titlebox .data{
+				position: absolute;
+				top: 0px;
+				left: 150px;
+				right: 50px;
+				height: 50px;
+				border-bottom: 1px solid #999999;
+				line-height: 50px;
+				padding-left: 10px;
+				font-weight: 600;
+				font-size: 25px;
+				color: #333333;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-o-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			 .content .right .content-data-titlebox .content-data {
+                 width: 100%;
+                 height: auto;
+                 color: #666666;
+                 padding-left: 100px;
+                 padding-right: 50px;
+                 line-height: 40px;
+                 -moz-box-sizing: border-box;
+                 -webkit-box-sizing: border-box;
+                 -o-box-sizing: border-box;
+                 -ms-box-sizing: border-box;
+                 box-sizing: border-box;
+             }

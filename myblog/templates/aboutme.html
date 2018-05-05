@@ -1,0 +1,177 @@
+{% load staticfiles %}
+{% load blog_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Black &amp; White</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
+ <link rel="stylesheet" href="{% static 'blog/css/aaa.css' %}">
+    <!-- js -->
+    <script src="{% static 'blog/js/jquery-2.1.3.min.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'blog/js/pace.min.js' %}"></script>
+    <script src="{% static 'blog/js/modernizr.custom.js' %}"></script>
+
+
+
+</head>
+
+<body>
+<div class="flex-center"  style="background-color: #EEE;height: 30px;">
+    <div class="container"  style="height: 30px;">
+        <div  style="height: 30px;">
+            {% if user.is_authenticated %}
+                <p style="height: 100%;margin: 0px;line-height: 30px;">你已登录，欢迎你：<a href="#">{{ user.username }}</a><a style="margin-left: 20px;text-decoration: underline">退出</a></p>
+                {% comment %}<button class="btn btn-default"><a href="{% url 'logout' %}?next={{ request.path }}">注销登录</a></button>
+                <button class="btn btn-default"><a href="{% url 'password_change' %}?next={{ request.path }}">修改密码</a></button>{% endcomment %}
+
+            {% else %}
+                 <div style="width: 100%;height: 100%;line-height: 30px;letter-spacing: 2px;">
+                    <div style="">你还没有登录，请<a  style="text-decoration:underline;" href="{% url 'login' %}?next={{ request.path }}">登录</a>或者<a style="text-decoration:underline"  href="{% url 'users:register' %}">注册</a></div>
+                </div>
+               {% comment %} <p  style="height: 100%;line-height: 30px;padding: 0px;">你还没有登录，请
+                    <button class="btn btn-default"  style="background-color: #EEEEEE;border:none;padding: 0px;"><a href="{% url 'login' %}?next={{ request.path }}">登录</a></button>
+                    或者
+                    <button class="btn btn-default"  style="background-color: #EEEEEE;border:none;padd "><a href="{% url 'users:register' %}">注册</a></button>
+                </p>{% endcomment %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <header id="site-header">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-8">
+                <div class="logo">
+                    <h1><a href="{% url 'blog:index' %}"><b>Black</b> &amp; White</a></h1>
+                </div>
+            </div><!-- col-md-4 -->
+            <div class="col-md-8 col-sm-7 col-xs-4">
+                <nav class="main-nav" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" id="trigger-overlay" class="navbar-toggle">
+                            <span class="ion-navicon"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'blog:aboutme' %}" data-hover="关于">关于我</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div><!-- col-md-8 -->
+        </div>
+    </header>
+</div>
+
+
+		<div class="content">
+			<div class="left">
+				<img src="img/itpx.png"/>
+				<div class="content-data">
+					<a></a><span>25岁</span>
+				</div>
+				<div class="content-data">
+					<a></a><span>广东省深圳市龙华新区民乐</span>
+				</div>
+				<div class="content-data">
+					<a></a><span>189-7148-1182</span>
+				</div>
+				<div class="content-data">
+					<a></a><span>452133098@qq.com</span>
+				</div>
+				<div class="skill"  style="margin-top: 100px;">python</div>
+				<div class="skillbar"  style="width: 200px"></div>
+
+			{% comment %}	<div class="skill">AI</div>
+				<div class="skillbar"  style="width: 250px;"></div>{% endcomment %}
+
+				<div class="skill">CSS</div>
+				<div class="skillbar"   style="width: 100px;"></div>
+
+				<div class="skill">JS</div>
+				<div class="skillbar"  style="width: 150px;"></div>
+
+			</div>
+			<div class="right">
+				<div class="name">周睿</div>
+				<div class="job">求职意向：python开发</div>
+				<div class="content-data-titlebox">
+					<div class="title-img">教育</div>
+					<div class="data">教育背景</div>
+					<div class="content-data">
+						<span>2012.9 至  2016.6 </span>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>武汉东湖学院</span>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>电子商务</span>
+						<br />
+						<span>PHP，统计学，电子商务英语，电子商务法，概率学...</span>
+					</div>
+				</div>
+
+				<div class="content-data-titlebox">
+					<div class="title-img">工作</div>
+					<div class="data">工作经验</div>
+					<div class="content-data">
+						<span>2017.5 至  2018.2 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>python开发</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>千峰教育</span>
+						<br />
+						<span style="font-size: 30px;color: #999999;font-weight: 600;">·</span> <span>负责大学项目官网原型设计，与开发人员合作开发网站；</span><br />
+						<span style="font-size: 30px;color: #999999;font-weight: 600;">·</span> <span>协助国富通产品经理进行国富通官网与APP的产品迭代。</span><br />
+						<span style="font-size: 30px;color: #999999;font-weight: 600;">·</span> <span>进行‘板友’项目的产品设计。</span><br />
+						<div style="width: 100%;height: 20px;"></div>
+					</div>
+				</div>
+
+
+				<div class="content-data-titlebox">
+					<div class="title-img">培训</div>
+					<div class="data">培训经历</div>
+					<div class="content-data">
+                        <span>2017.7 至  2018.4 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>深圳前海国富通电子商务有限公司</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>产品助理</span>
+						<br />
+						<span>培训描述：</span><span>python语言基础简介，主要知识点包括基本语法、文件操作、库、面向对象、进程线程协程、网络编程、数据库等。</span>
+                        <br />
+                        <span>Django框架的学习。</span>
+					</div>
+				</div>
+
+
+				<div class="content-data-titlebox">
+					<div class="title-img">评价</div>
+					<div class="data">自我评价</div>
+					<div class="content-data">
+						精通python，熟练使用Django框架进行网站开发。
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="copyright">&copy 2017 - <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">个人博客</a> - <a href="http://zmrenwu.com/" title="网页模板" target="_blank"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
